@@ -1,0 +1,75 @@
+---
+title       : Developing Data Products Project
+subtitle    : Data Science Specialization
+author      : misket
+job         : Coursera
+logo        : devApp.jpg
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, quiz, bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## Let's Begin
+
+1. I have nothing to pitch here
+2. So I'll try to do some random ranting and playing aound
+3. Here goes nothing!
+
+--- .class #id 
+
+## Let's play around a little with mathematical expressions
+
+- I want to begin with expressing how much I like $\pi$. It is a wonderful number and you encounter it virtually everywhere.
+
+- Its value is beyond my grasp. But is begins elegantly with $3.1416..$ and has no end.
+
+- Did you know: $$\frac{22}{7} \approxeq \pi$$ Cool isn't it!
+
+--- &radio
+
+## Now let's try the interactive elements
+
+What is the answer to **1 Answer to the Ultimate Question of Life, the Universe, and Everything**?
+
+1. 55
+2. 93
+3. 77
+5. _42_
+4. All of the above
+4. None of the above
+5. some of the above
+
+*** .hint 
+You know the answer just *Don't Panic*
+
+*** .explanation 
+Don't forget your **towel** before moving ahead!
+
+--- &twocol
+
+## Let's embed an R code that does nothing useful!
+
+*** =left
+
+Let's try and load a library
+```{r}
+library(ggplot2)
+data(mtcars)
+```
+Finally a neat looking plot
+```{r, }
+plot <- ggplot(mtcars, aes(wt, mpg)) + 
+            geom_point(aes(colour = as.factor(gear))) + 
+            stat_smooth(method = "lm") +
+            labs(x = "Car Weight (1000lbs)", y = "MPG",
+                 colour = "Num. of Gears")
+```
+
+I could not understand why it echoes to the center?
+*** =right
+
+```{r, echo = FALSE}
+plot
+```
